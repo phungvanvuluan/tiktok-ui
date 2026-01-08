@@ -3,49 +3,22 @@
 
 :root {
     --color-primary: #fe2c55;
-    --color-secondary: #50e3c2;
-    --color-background: #f5f7fa;
-    --color-text: #333333;
-    --font-family-base: 'IBM Plex Sans', sans-serif;
-    --font-size-base: 16px;
-    --spacing-base: 1rem;
-    --border-radius-base: 4px;
-    --box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
-    line-height: 1.5;
-    text-rendering: optimizeSpeed;
+
+    //default layout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
 }
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
-    background-color: var(--color-background);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
 }
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-}
-input,
-textarea {
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-base);
-    padding: calc(var(--spacing-base) / 2);
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius-base);
-    box-shadow: var(--box-shadow-base);
-    &:focus {
-        border-color: var(--color-primary);
-        outline: none;
-    }
-}
-
 html {
     font-size: 62.5%;
 }
