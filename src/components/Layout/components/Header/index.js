@@ -18,6 +18,7 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { type } from '@testing-library/user-event/dist/type';
 
 const cx = classNames.bind(styles);
 
@@ -28,11 +29,11 @@ const MENU_ITEMS = [
         children: {
             title: 'Language',
             data: [
-                { code: 'en', title: 'English' },
-                { code: 'vi', title: 'Tiếng Việt' },
-                { code: 'jp', title: 'Tiếng Nhật' },
-                { code: 'kr', title: 'Tiếng Hàn' },
-                { code: 'cn', title: 'Tiếng Trung' },
+                { code: 'en', title: 'English', type: 'language' },
+                { code: 'vi', title: 'Tiếng Việt', type: 'language' },
+                { code: 'jp', title: 'Tiếng Nhật', type: 'language' },
+                { code: 'kr', title: 'Tiếng Hàn', type: 'language' },
+                { code: 'cn', title: 'Tiếng Trung', type: 'language' },
             ],
         },
     },
@@ -55,7 +56,15 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, []);
-
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                // Handle change language
+                console.log(menuItem);
+                break;
+            default:
+        }
+    };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -104,7 +113,7 @@ function Header() {
                 <div className={cx('actions')}>
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
