@@ -25,6 +25,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { SearchIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Images';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -138,7 +140,7 @@ function Header() {
                         />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -147,7 +149,7 @@ function Header() {
                         <>
                             <Tippy content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -162,7 +164,7 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/b3dd6f9438e4d93deb862612a7f6eb27~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=91eedebf&x-expires=1768788000&x-signature=OW5Is%2FUvyJNdPab22fUsz%2BfpY6Y%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2"
                                 alt="User Avatar"

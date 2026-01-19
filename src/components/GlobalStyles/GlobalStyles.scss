@@ -8,7 +8,7 @@
     --black: #000000;
     --text-color: #161823;
     --white: #fff;
-    --font-family-base: 'IBM Plex Sans', sans-serif;
+    --font-family-base: 'TikTokFont', sans-serif;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
@@ -18,6 +18,31 @@
     margin: 0;
     padding: 0;
 }
+//font embeded
+@font-face {
+    font-family: 'TikTokFontb';
+    src: url('../../assets/font/TikTokDisplayFont-Bold.woff2') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'TikTokFontb';
+    src: url('../../assets/font/TikTokFont-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url('../../assets/font/TikTokFont-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url('../../assets/font/TikTokFont-Semibold.woff2') format('woff2');
+    font-weight: 600;
+}
+
 body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
