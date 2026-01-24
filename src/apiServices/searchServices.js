@@ -7,7 +7,6 @@ export const search = async (q, limit = 5) => {
                 limit,
             },
         });
-        console.log(res.users);
         return res.users;
     } catch (error) {
         console.log(error);
