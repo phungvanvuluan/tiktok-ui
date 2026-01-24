@@ -19,7 +19,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
-import { UploadIcon } from '~/components/Icons';
+import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Images';
 import Search from '../Search';
 const cx = classNames.bind(styles);
@@ -104,6 +104,25 @@ function Header() {
                                     <UploadIcon />
                                 </button>
                             </Tippy>
+                            <Tippy
+                                delay={[0, 50]}
+                                content="Message"
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 50]}
+                                content="Inbox"
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
+                                </button>
+                            </Tippy>
                         </>
                     ) : (
                         <>
@@ -118,7 +137,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/b3dd6f9438e4d93deb862612a7f6eb27~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=91eedebf&x-expires=1768788000&x-signature=OW5Is%2FUvyJNdPab22fUsz%2BfpY6Y%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2"
+                                src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-1/542742588_4295524057435787_1954443061518114506_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGut-iZ4Vtrg6pkgcaEHXK0oBi5uE25_lKgGLm4Tbn-UpYDX7Oz5bz2M-MU7r1pLHV8OZwUFO7fIstuLSd7khXu&_nc_ohc=jkoiyowSzuMQ7kNvwFxarRR&_nc_oc=Adn2Sq3ML0-0Woi_71z0vcX5f5O6R4NLCOT87JooOvMcD2HLF_KCd5braRhfL5WVusC7Y4aaonKssk7F_R-TG4v1&_nc_zt=24&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=8_T2-iw084Wi1Bdhc7-vCw&oh=00_AfpeGy6qRPQDO2OAbTPnUS2q_dfG_fXE8XbT1vh1kF1v-g&oe=6979FAF7"
                                 alt="User Avatar"
                             />
                         ) : (
