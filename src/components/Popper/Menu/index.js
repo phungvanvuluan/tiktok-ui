@@ -49,7 +49,7 @@ function Menu({
             hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('menu-wrapper')}>
+                    <PopperWrapper className={cx('menu-popper')}>
                         {history.length > 1 && (
                             <Header
                                 title="Language"
@@ -60,7 +60,7 @@ function Menu({
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}> {renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
