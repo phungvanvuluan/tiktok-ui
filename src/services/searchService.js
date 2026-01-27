@@ -1,7 +1,7 @@
-import * as request from '~/utils/request';
+import * as httpRequest from '~/utils/httpRequest';
 export const search = async (q, limit = 5) => {
     try {
-        const res = await request.get(`users/search`, {
+        const res = await httpRequest.get(`users/search`, {
             params: {
                 q,
                 limit,
