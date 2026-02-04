@@ -24,11 +24,18 @@
     }
 }
 
+.icon,
+.active-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 .title {
     margin-left: 10px;
-}
-.icon .active-icon {
-    display: flex;
 }
 
 .active-icon {
